@@ -1,0 +1,78 @@
+﻿import java.util.Scanner;  
+import java.lang.Math;  
+public class AreaOfCircle1  
+{  
+public static void main(String[] args)   
+{  
+int option;  
+double radius, circumference, diameter, area;    
+//object of the Scanner class  
+Scanner sc=new Scanner (System.in);  
+//options available  
+System.out.println("1. If the radius is known");   
+System.out.println("2. If the diameter is known");    
+System.out.println("3. If the circumference is known");    
+System.out.print("Enter your choice: ");    
+//taking an option as input from the user  
+option=sc.nextInt();  
+switch(option)  
+{    
+//Case statements    
+case 1:   
+    System.out.print("Enter the radius of the circle: ");   
+    radius=sc.nextDouble();  
+    area=(Math.PI*(radius*radius));  
+    System.out.print("The area of the circle is: "+area);   
+    break;    
+case 2:  
+    System.out.print("Enter the diameter of the circle: ");   
+    diameter=sc.nextDouble();  
+    area=Math.PI*(diameter*diameter)/4;  
+    System.out.print("The area of the circle is: "+area);   
+    break;   
+case 3:   
+    System.out.print("Enter the circumference of the circle: ");   
+    circumference=sc.nextDouble();  
+    area=(circumference*circumference)/(4*Math.PI);  
+    System.out.print("The area of the circle is: "+area);   
+    break;    
+//default case statement executes when an invalid choice is entered  
+default:System.out.println("invalid choice!");     
+}    
+}    
+}    
+
+Output:-
+===========
+1. If the radius is known
+2. If the diameter is known
+3. If the circumference is known
+Enter your choice: 1
+Enter the radius of the circle: 6
+The area of the circle is: 113.09733552923255
+
+2nd output:-
+============
+1. If the radius is known
+2. If the diameter is known
+3. If the circumference is known
+Enter your choice: 2
+Enter the diameter of the circle: 16
+The area of the circle is: 201.06192982974676
+
+3rd output:-
+=============
+1. If the radius is known
+2. If the diameter is known
+3. If the circumference is known
+Enter your choice: 3
+Enter the circumference of the circle: 30
+The area of the circle is: 71.6197243913529
+
+4th output:-
+============
+1. If the radius is known
+2. If the diameter is known
+3. If the circumference is known
+Enter your choice: 4
+invalid choice!
